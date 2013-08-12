@@ -1,0 +1,77 @@
+#
+# Apaxy by @adamwhitcroft
+#
+# For a full breakdown of the mod_autoindex module:
+# http://apache.org/docs/2.2/mod/mod_autoindex.html
+#
+
+	# ENABLE INDEXING
+	Options +Indexes
+
+	# INDEX OPTIONS
+	IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=*
+
+	# HIDE /theme DIRECTORY
+	IndexIgnore .htaccess /theme
+
+#
+# GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
+#
+
+#
+# Replace vrphp with your directory URL eg:
+# If your directory is http://mywebsite.com/share/
+# you would change to:
+#
+# AddIcon /share/theme/icons/blank.png ^^BLANKICON^^
+#
+
+	AddIcon /vrphp/theme/icons/blank.png ^^BLANKICON^^
+	AddIcon /vrphp/theme/icons/folder.png ^^DIRECTORY^^
+	AddIcon /vrphp/theme/icons/folder-home.png ..
+
+#
+# EXTENSION SPECIFIC ICONS
+#
+
+	AddIcon /vrphp/theme/icons/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra .wav .wma
+	AddIcon /vrphp/theme/icons/bin.png .bin
+	AddIcon /vrphp/theme/icons/c.png .c
+	AddIcon /vrphp/theme/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+	AddIcon /vrphp/theme/icons/css.png .css
+	AddIcon /vrphp/theme/icons/deb.png .deb
+	AddIcon /vrphp/theme/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+	AddIcon /vrphp/theme/icons/draw.png .svg
+	AddIcon /vrphp/theme/icons/eps.png .ai .eps
+	AddIcon /vrphp/theme/icons/gif.png .gif
+	AddIcon /vrphp/theme/icons/html.png .html .xhtml .shtml .htm
+	AddIcon /vrphp/theme/icons/ico.png .ico
+	AddIcon /vrphp/theme/icons/java.png .jar
+	AddIcon /vrphp/theme/icons/jpg.png .jpg .jpeg
+	AddIcon /vrphp/theme/icons/js.png .js .json
+	AddIcon /vrphp/theme/icons/markdown.png .md
+	AddIcon /vrphp/theme/icons/package.png .pkg .dmg
+	AddIcon /vrphp/theme/icons/pdf.png .pdf
+	AddIcon /vrphp/theme/icons/php.png .php
+	AddIcon /vrphp/theme/icons/png.png .png
+	AddIcon /vrphp/theme/icons/ps.png .ps
+	AddIcon /vrphp/theme/icons/psd.png .psd
+	AddIcon /vrphp/theme/icons/rar.png .rar
+	AddIcon /vrphp/theme/icons/rb.png .rb
+	AddIcon /vrphp/theme/icons/rpm.png .rpm
+	AddIcon /vrphp/theme/icons/rss.png .rss
+	AddIcon /vrphp/theme/icons/sql.png .sql
+	AddIcon /vrphp/theme/icons/tiff.png .tiff
+	AddIcon /vrphp/theme/icons/text.png .txt
+	AddIcon /vrphp/theme/icons/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv
+	AddIcon /vrphp/theme/icons/xml.png .xml
+	AddIcon /vrphp/theme/icons/zip.png .zip
+	DefaultIcon /vrphp/theme/icons/default.png
+
+#
+# THEME FILES
+#
+
+	HeaderName /vrphp/theme/header.html
+	ReadmeName /vrphp/theme/footer.html
+	IndexStyleSheet "/vrphp/theme/style.css"
