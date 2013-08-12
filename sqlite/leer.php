@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>SQLite 3</title>
 </head>
-<body style="font-size: 32px;">
+<body style="font-size: 2em;">
 	<table border=10>
 		<?php
 			$bd=new SQLite3("preguntasyrespuestas.db");
