@@ -10,7 +10,7 @@
 			$bd=new SQLite3("preguntasyrespuestas.db");
 			$resultado = $bd->query("SELECT * FROM 'cat_piw' ORDER BY 'id' DESC;");
 			while($fila = $resultado->fetchArray()){
-				echo "<tr><td>".$fila["pregunta"]."</td><td>".$fila["respuesta"]."</td><td><img src='imagenes/".$fila["imagen"]."' width=300px></td></tr>";
+				echo "<tr><td>".$fila["pregunta"]."</td><td>".$fila["respuesta"]."</td><td><img alt='imagen".$fila["id"].".JPG' src='".$fila["imagen"]."' width=300px></td></tr>";
 			}
 			$bd->close();
 		?>
